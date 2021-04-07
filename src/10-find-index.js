@@ -13,10 +13,11 @@
  */
 function findIndex(array, value) {
   let num;
-  let i = 0;
-  while (array[i] !== value) {
-    num = i;
-    i++;
+  for (let i = array.length; i >= 0; i--) {
+    if (array[i] === value) {
+      num = i;
+      break;
+    }
   }
   return num;
 }
